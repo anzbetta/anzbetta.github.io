@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/media.css">
+    
+        <link rel="shortcut icon" href="https://iconarchive.com/download/i103804/custom-icon-design/flatastic-7/Laptop.ico" type="image/x-icon">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <title>Портфоліо</title>
+    </head>
+<body>
+    
+    <div id="app">
+        <header class="header">
+            <div class="container header__container">
+                <div class="header__top">
+                    <!-- <h1 class="header__title">Портфолио frontend-разработчика</h1> -->
+                    <div class="header__contact"><button class="header__contact-btn" id="open-popup">Get in touch</button></div>
+                </div>
+                <div class="header__person">
+                    <div class="header__person-icon">
+                        <img src="img/logo.png" alt="img" class="header__person-icon-img">
+                    </div>
+                    <div class="header__person-name">Babichenko Ann</div>
+                </div>
+            </div>
+        </header>
+    
+        <main class="container main">
+    
+            <div class="main-sidebar">
+    
+                <aside class="sidebar">
+                    <div class="sidebar__block">
+                        <h2 class="sidebar__title">Contants</h2>
+                        <ul class="sidebar__contact-list">
+                            <li class="sidebar__contact-list-item"><a href="https://t.me/annbabichenko" class="sidebar__contact-list-link" id="telegram" target="_blank"><img src="img/contacts/1.png" alt=""> t.me/annbabichenko</a></li>
+                            <li class="sidebar__contact-list-item"> <a href="https://www.instagram.com/_anytka_b/" class="sidebar__contact-list-link" id="instagram" target="_blank"><img src="img/contacts/2.png" alt="">@_anytka_b</a></li>
+                            <li class="sidebar__contact-list-item"> <a href="mailto:ann.babichenko@gmail.com" class="sidebar__contact-list-link" id="mail" target="_blank"><img src="img/contacts/5.png" alt="">ann.babichenko@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar__block sidebar__block-works">
+                        <div class="sidebar__works"><div class="sidebar__works-title">Works</div>  <span class="sidebar__works-count"></span></div>
+                    </div>
+                    <div class="sidebar__block">
+                        <div class="sidebar__about">
+                            <h2 class="sidebar__about-title">About me</h2>
+                            <p class="sidebar__about-text">
+                                <p class="sidebar__about-paragraph">
+                                Education:</p>
+                                    <ul class="sidebar__about-list">
+                                        <li>2022 - present time: Kyiv National University of Economics named after Vadym Hetman. Specialty: Computer Science.</li>
+                                        <li>2020 - 2021: UX/UI design course at Edison-IT Academy.</li>
+                                    </ul>
+                                
+                                <p class="sidebar__about-paragraph">
+                                Experience:</p>
+                                    <ul class="sidebar__about-list">
+                                        <li>2022 - present time: Math and English tutor. I have experience of long-term cooperation with children and adults aged from 6 to 40 years.</li>
+                                    </ul>
+                                
+                                <p class="sidebar__about-paragraph">
+                                Professional competences and qualities:</p>
+                                    <ul class="sidebar__about-list">
+                                        <li>fluent and active use of Microsoft Office</li>
+                                        <li>Upper Intermediate english level (B2)</li>
+                                        <li>fluent and active use of the Figma platform</li>
+                                        <li>basic knowledge of HTML, CSS</li>
+                                        <li>stress resistance and ability to work in a team</li>
+                                        <li>striving for development and self-improvement</li>
+                                    </ul>
+                                
+                            </p>
+                        </div>
+                    </div>
+                </aside>
+    
+            </div>
+            <div class="main-projects">
+                <div class="projects__inner">
+                    <project v-for="project in projects" v-bind:project="project"></project>
+                </div>
+                <!-- <div class="projects__descr">
+                    <p class="projects__descr-text">Більше робіт</p>
+                    <div class="projects__descr-btn">
+                        <a class="projects__descr-link" target="_blank" href="https://github.com/agentdmitro?tab=repositories">GitHub репозиторій</a>
+                    </div>
+                </div> -->
+            </div>
+    
+        </main>
+    
+        <div class="popup popup__contact">
+            <button class="popup__close" id="close-popup"><span></span></button>
+            <div class="popup__inner">
+                <div class="popup__title">Contact</div>
+                <div class="popup__contact-list">
+                    <a href="https://t.me/annbabichenko" class="popup__contact-link" target="_blank">
+                        <div class="popup__contact-link-img"><img src="img/contacts/1.png" alt=""></div>
+                        <div class="popup__contact-link-title">Telegram</div>
+                    </a>
+                    <a href="https://www.instagram.com/_anytka_b/" class="popup__contact-link" target="_blank">
+                        <div class="popup__contact-link-img"><img src="img/contacts/2.png" alt=""></div>
+                        <div class="popup__contact-link-title">Instagram</div>
+                    </a>
+                    <a href="https://github.com/anzbetta" class="popup__contact-link" target="_blank">
+                        <div class="popup__contact-link-img"><img src="img/contacts/3.png" alt=""></div>
+                        <div class="popup__contact-link-title">GitHub</div>
+                    </a>
+                    <a href="tel:+380674443444" class="popup__contact-link">
+                        <div class="popup__contact-link-img"><img src="img/contacts/4.png" alt=""></div>
+                        <div class="popup__contact-link-title">Phone</div>
+                    </a>
+                    <a href="mailto:ann.babichenko@gmail.com" class="popup__contact-link">
+                        <div class="popup__contact-link-img"><img src="img/contacts/5.png" alt=""></div>
+                        <div class="popup__contact-link-title">Gmail</div>
+                    </a>
+                    <a href="https://www.facebook.com/dmytro.fedorchenko.5/"  class="popup__contact-link" target="_blank">
+                        <div class="popup__contact-link-img"><img src="img/contacts/6.png" alt=""></div>
+                        <div class="popup__contact-link-title">Facebook</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="bg"></div>
+    
+    </div>
+    
+
+    <script src="js/jquery.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
